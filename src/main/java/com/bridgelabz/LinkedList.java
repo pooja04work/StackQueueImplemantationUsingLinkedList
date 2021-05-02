@@ -44,9 +44,9 @@ public class LinkedList implements List<INode> {
 
     @Override
     public INode pop() {
-        INode tempNode = this.head;
-        this.head = head.getNext();
-        return tempNode;
+            INode tempNode = this.head;
+            this.head = head.getNext();
+            return tempNode;
     }
 
     @Override

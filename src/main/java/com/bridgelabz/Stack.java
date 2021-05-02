@@ -7,12 +7,27 @@ public class Stack {
         linkedlist.add(newNode);
     }
 
-    public void printStack() {
+    public double printStack() {
         linkedlist.printMyNode();
+        return 0;
     }
 
     public INode peak() {
         return linkedlist.head;
     }
 
+    public void popStack() {
+        int count = 3;
+        while (count != 0) {
+            if (linkedlist.head != linkedlist.tail) {
+                linkedlist.pop();
+                count--;
+                linkedlist.head = linkedlist.head.getNext();
+            } else {
+                linkedlist.head.setdata(linkedlist.head.getNext());
+                count--;
+            }
+        }
+    }
 }
+
