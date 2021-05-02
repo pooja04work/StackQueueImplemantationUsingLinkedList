@@ -22,7 +22,9 @@ public class Stack {
             if (linkedlist.head != linkedlist.tail) {
                 linkedlist.pop();
                 count--;
+                printStack();
                 linkedlist.head = linkedlist.head.getNext();
+                printStack();
             } else {
                 linkedlist.head.setdata(linkedlist.head.getNext());
                 count--;
